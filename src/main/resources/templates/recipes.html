@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+<title>Insert title here</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{styles/recipes_style.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Kavivanar|Montserrat|Supermercado+One" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
+</head>
+<body data-spy="scroll" id="top">
+   <div class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="http://localhost:8080/">Defu's Recipes</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li><a href="http://localhost:8080/#top">Etusivu</a></li>
+                <li><a href="#kuvat">Kuvia</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reseptit
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://localhost:8080/#recipes">Tietoa resepteistä</a></li>
+                        <li><a href="#">Resepti lista</a></li>
+                        <li><a href="http://localhost:8080/addrecipe">Lisää resepti</a></li>
+                    </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://www.instagram.com/TT_Defu/"><span class="fa fa-instagram"></span>Instagram</a></li>
+              </ul>
+            </div>  
+          </div>
+        </nav>
+
+    <tr th:each="recipe : ${recipes}">
+        <td th:text="${recipe.id}">1</td>
+        <td th:text="${recipe.name}">name</td>
+        <td th:text="${recipe.ingreds}">ingreds</td>
+        <br/>
+    </tr>
+    
+    </div>
+    
+</body>
+</html>

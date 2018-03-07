@@ -1,0 +1,98 @@
+.navbar-inverse {
+    background-color: darkolivegreen;
+    border-color: antiquewhite;
+}
+
+li.active a {
+    background-color: darkred
+        !important;
+}
+
+#kuvat {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    background-color: darkolivegreen;
+}
+
+.navbar-inverse .navbar-brand {
+    color: bisque;
+    font-family: 'Supermercado One', cursive;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: aliceblue;
+    font-family: 'Kavivanar', cursive;
+}
+
+body {
+    position: relative;
+    padding-top: 60px;
+}
+
+.carousel-inner img {
+    margin: auto;
+    min-height:200px;
+    max-height: 500px;
+  }
+
+.carousel-inner {
+    background-color: darkolivegreen;
+}
+
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: aliceblue;
+}
+
+.col-sm-8 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.col-sm-2 {
+    text-align: center;
+}
+
+.panel-group img {
+    max-width: 300px;
+    max-height: 200px;
+}
+
+h1 {
+    font-family: 'Supermercado One', cursive;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.panel-group p {
+    padding-left: 50px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 1000px;
+}
+
+@media (max-width: 800px){
+    .carousel-inner img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 500px){
+    .carousel-caption p {
+        display: none;  
+    }
+    .carousel-inner img {
+        max-height: 10px;
+    }
+    
+    .panel-group img {
+        display: none;
+    }
+    
+
+}
